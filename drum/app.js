@@ -8,10 +8,17 @@ window.addEventListener('keydown', function(e){
     audio.play();
     key.classList.add('playing');
     // console.log(key)
-    function remClass (){
-    key.classList.remove('playing')
-    }
-    window.addEventListener('keyup', remClass);
+    // function remClass (){
+    // key.classList.remove('playing')
+    // }
+    // window.addEventListener('keyup', remClass);
 })
 
+function removeTransition(e){
+    if (e.propertyName !== 'transform') return; //skip if is not transform
+    console.log(this);
+    this.classList.remove('playing')
+}
+const keys = document.querySelectorAll('.key')
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
