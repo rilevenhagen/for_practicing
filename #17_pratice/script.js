@@ -19,12 +19,22 @@ const openModal = function () {
   overlay.classList.remove('hidden');
 };
 
+// =======get the key to close the modal =======
+
+const logKey = function (e) {
+  if (e.keyCode === 27) {
+    return closeModal();
+  }
+};
+
 // =======get the btn and open the modal=======
 
 for (let i = 0; i < btnOpenModal.length; i++)
-  btnOpenModal[i].addEventListener('click', open);
+  btnOpenModal[i].addEventListener('click', openModal);
 
 //=======to close de modal=======
 
-overlay.addEventListener('click', close);
-btnCloseModal.addEventListener('click', close);
+overlay.addEventListener('click', closeModal);
+btnCloseModal.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', logKey);
