@@ -22,8 +22,8 @@ const openModal = function () {
 // =======get the key to close the modal =======
 
 const logKey = function (e) {
-  if (e.keyCode === 27) {
-    return closeModal();
+  if (e.keyCode === 27 && !modal.classList.contains('hidden')) {
+    closeModal();
   }
 };
 
@@ -36,5 +36,4 @@ for (let i = 0; i < btnOpenModal.length; i++)
 
 overlay.addEventListener('click', closeModal);
 btnCloseModal.addEventListener('click', closeModal);
-
 document.addEventListener('keydown', logKey);
