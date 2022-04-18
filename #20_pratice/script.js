@@ -41,7 +41,61 @@ const restaurant = {
     );
     console.log('☃️☃️☃️☃️☃️☃️☃️☃️☃️☃️');
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Lets do some pasta with ${ing1}, ${ing2} and ${ing3}`);
+  },
 };
+
+//spread, because is on the Right side of the operator
+console.log('🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, ');
+const arr1 = [1, 2, ...[3, 4]];
+
+const [i, n, ...others] = [8, 9, 3, 4, 5, 6];
+
+console.log(i, n, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+
+//object
+const { sat, ...weekDays } = { ...restaurant.openingHours };
+
+console.log(weekDays);
+
+// 2 functions
+
+console.log('🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, ');
+/* 
+const ingredient = [
+  prompt("let's make pasta! Ingredient 1?"),
+  prompt("let's make pasta! Ingredient 2?"),
+  prompt("let's make pasta! Ingredient 3?"),
+];
+//using a spread operator
+console.log('🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝');
+console.log(ingredient);
+
+restaurant.orderPasta(...ingredient);
+*/
+
+//object
+const newRestaurant = { foundedIn: 2020, ...restaurant, founder: 'Barbara' };
+
+console.log(newRestaurant);
+
+console.log('🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝');
+const restaurantCopy = { ...newRestaurant };
+restaurantCopy.name = 'Novo restaurante';
+console.log(newRestaurant);
+console.log(restaurantCopy);
+
+//==============
+console.log('🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝🍝');
 
 restaurant.orderDelivery({
   time: '22:30',
@@ -149,7 +203,7 @@ console.log(o, d);
 
 //==========================
 
-console.clear();
+// console.clear();/==========================/==========================
 
 //Spread operator
 
@@ -166,3 +220,20 @@ console.log(...newArray, ...theArray);
 const newMenu = [...restaurant.mainMenu, 'Pasta Arabiata'];
 
 console.log(newMenu);
+
+//copy array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+console.log(mainMenuCopy);
+
+//join 2 arrays
+
+const allMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(allMenu);
+
+// Interables: arrays, strings, maps, sets. But NOT objects
+
+const str = 'Nicholas';
+const letters = [...str, ' ', 'M.'];
+console.log(letters);
