@@ -45,9 +45,15 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Lets do some pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredient) {
+    console.log(mainIngredient);
+    console.log(otherIngredient);
+  },
 };
 
 //spread, because is on the Right side of the operator
+//1 destructuring
 console.log('🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, ');
 const arr1 = [1, 2, ...[3, 4]];
 
@@ -62,14 +68,30 @@ const [pizza, , risotto, ...otherFood] = [
 
 console.log(pizza, risotto, otherFood);
 
-//object
+//object with rest pattern
 const { sat, ...weekDays } = { ...restaurant.openingHours };
 
 console.log(weekDays);
 
-// 2 functions
+// *2 functions
+console.log('🦖 🦖 🦖 🦖 🦖 🦖 🦖 🦖');
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+const t = [23, 5, 7];
+add(...t);
 
-console.log('🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, ');
+restaurant.orderPizza('mushrooms', 'onions', 'olives', 'spinach');
+restaurant.orderPizza('onions');
+
+console.log('🦖 🦖 🦖 🦖 🦖 🦖 🦖 🦖');
+
+console.log('🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯, 🎯');
 /* 
 const ingredient = [
   prompt("let's make pasta! Ingredient 1?"),
@@ -237,3 +259,48 @@ console.log(allMenu);
 const str = 'Nicholas';
 const letters = [...str, ' ', 'M.'];
 console.log(letters);
+
+console.log('🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞');
+//=============================
+// use any data type, return any data type => short-circuiting = is the first operator is truthy it will immediately returned the first or the last one if all are falsy
+
+console.log(3 || 'Ricardo');
+console.log('' || 'Ricardo');
+console.log(true || 0);
+console.log(0 || true);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hallo' || 23 || null);
+console.log('🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞');
+
+restaurant.numGuests = 10;
+
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+
+console.log(guest2);
+
+console.log('-----AND OPERATOR------');
+//the && will returned the first falsy value or the last one if all of them are truthy
+
+//the AND operator returned the first falsy value
+console.log(0 && 'Ricardo');
+console.log(7 && 'Ricardo');
+console.log('hello' && 23 && null && 'Ricardo');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('spinach', 'mushrooms');
+
+console.log('🦉🦉🦉🦉🦉🦉 nullish coalescing operator 🦉🦉🦉🦉🦉🦉');
+restaurant.numGuests = 0;
+const guest = restaurant.numGuests || 10;
+console.log(guest);
+// nullish values are null and undefined(not 0 or "")
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
