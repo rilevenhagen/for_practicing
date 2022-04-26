@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- font family  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <!-- font family  -->
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+
+<body>
+  <!-- ============header start here============ -->
+  <header class="wrapper">
+    <!-- menu bar -->
+    <nav>
+      <div class="title">
+        <h1>snap</h1>
+      </div>
+      <div class="ul-box">
+        <ul>
+          <li><a class="aNav feature" href="">Features <img class="arrow" src="./images/icon-arrow-down.svg" alt=""
+                srcset=""></a></li>
+          <li><a class="aNav company" href="">Company<img class="arrow" src="./images/icon-arrow-down.svg" alt=""
+                srcset=""></a>
+          </li>
+          <li><a class="aNav" href="">Careers</a>
+          </li>
+          <li><a class="aNav" href="">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ================= hidden menu================= -->
+      <div class="ul-hidden-box hidden-nav">
+        <ul>
+          <li><a class="aNav" href="">Features <img class="arrow" src="./images/icon-arrow-down.svg" alt=""
+                srcset=""></a>
+          </li>
+          <li><a class="aNav" href="">Company<img class="arrow" src="./images/icon-arrow-down.svg" alt="" srcset=""></a>
+          </li>
+          <li><a class="aNav" href="">Careers</a>
+          </li>
+          <li><a class="aNav" href="">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown-hidden  hidden-nav">
+        <ul class="ul-dropdown">
+          <li><a class="aNav" href=""> <img class="dropdown-image" src="./images/icon-todo.svg" alt="" srcset=""> Todo
+              List</a>
+          </li>
+          <li><a class="aNav" href=""><img class="dropdown-image" src="./images/icon-calendar.svg" alt="" srcset="">
+              Calendar</a>
+          </li>
+          <li><a class="aNav" href=""><img class="dropdown-image" src="./images/icon-reminders.svg" alt="" srcset="">
+              Remainders</a>
+          </li>
+          <li><a class="aNav" href=""><img class="dropdown-image" src="./images/icon-planning.svg" alt="" srcset="">
+              Planning</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dropdown-hidden2 hidden-nav">
+        <ul class="ul-dropdown2">
+          <li><a class="aNav" href="">History</a>
+          </li>
+          <li><a class="aNav" href="">Our Team</a>
+          </li>
+          <li><a class="aNav" href="">Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="login-box">
+        <ul>
+          <li><a class="login" href="">Login</a></li>
+          <li><a class="login btn" href="">Register</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+
+  </header>
+
+  <!-- ============MAIN start here============ -->
+  <main>
+
+    <section class="wrapper main-section">
+
+      <div class="first-block">
+        <div class="txt-title">
+          <h2>Make </h2>
+          <h2>remote work</h2>
+        </div>
+
+        <div class="txt-main">
+          <p> Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.
+          </p>
+        </div>
+
+        <div class="btn-learn">
+          <h3><a class="btn" href="http://"> Learn more</a></h3>
+        </div>
+
+        <div class="logos-img-box">
+          <img class="logos-img" src="./images/client-databiz.svg" alt="">
+          <img class="logos-img" src="./images/client-audiophile.svg" alt="">
+          <img class="logos-img" src="./images/client-meet.svg" alt="">
+          <img class="logos-img" src="./images/client-maker.svg" alt="">
+        </div>
+      </div>
+
+      <div class="second-block">
+        <div>
+          <img class="hero-img" src="./images/image-hero-desktop.png" alt="">
+        </div>
+      </div>
+
+
+
+    </section>
+
+  </main>
+
+  <!--============FOOTERstart here============  -->
+  <footer>
+    <div class="attribution wrapper">
+      <p> Challenge by </p>
+      <p><a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a></p>
+      <p>Coded by</p>
+      <p><a href="#"> Ricardo Levenhagen </a></p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
