@@ -395,7 +395,26 @@ a {
 /*=============== bottoms  ============*/
 .btn {
   border: 1px solid black;
-  color: black;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: black;
+  cursor: pointer;
+  padding: 13px 22px;
+  font-size: 1rem;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  color: rgb(0, 0, 0);
+  background: none;
+  border-radius: 10px;
+}
+
+.btnLogin {
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   background: none;
   cursor: pointer;
@@ -406,9 +425,9 @@ a {
   transition: 0.5s;
 }
 
-.btn:hover {
-  color: white;
-  background: black;
+.btnLogin:hover {
+  color: rgb(0, 0, 0);
+  background: none;
   border-radius: 10px;
 }
 
@@ -489,4 +508,25 @@ footer p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* media query  */
+@media (max-width: 375px) {
+  .wrapper {
+    max-width: 375px;
+    width: 96%;
+  }
+
+  .hero-img {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
