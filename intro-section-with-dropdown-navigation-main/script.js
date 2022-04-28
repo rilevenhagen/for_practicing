@@ -8,8 +8,19 @@ const dropdownFeature = document.querySelector('.dropdown-hidden');
 
 const dropdownFeature2 = document.querySelector('.dropdown-hidden2');
 
+const hamburgerLines = document.querySelector('.hamburger-lines');
+
+const menuAction = document.querySelector('.ul-box');
+
 // function
+
+const change = function () {
+  hamburgerLines.classList.toggle('x-menu');
+  menuAction.classList.toggle('x-menu');
+};
+
 const menuArray = [dropdownFeature, dropdownFeature2];
+
 const clickOut = function (event) {
   for (let i = 0; i < menuArray.length; i++) {
     let on = menuArray[i];
@@ -39,3 +50,4 @@ const click2 = function () {
 feature.addEventListener('click', click);
 company.addEventListener('click', click2);
 window.addEventListener('mouseup', clickOut);
+hamburgerLines.addEventListener('click', change);
