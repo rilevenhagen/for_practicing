@@ -259,7 +259,8 @@ h2 {
   margin-top: 0;
   font-family: 'Epilogue', sans-serif;
   font-weight: 700;
-  width: 100%;
+  width: 69%;
+  text-align: initial;
 }
 
 h3,
@@ -276,6 +277,9 @@ p {
   font-size: 1.125rem;
 }
 
+.hero-img2 {
+  display: none;
+}
 /*=============== menu   ============*/
 header {
   display: flex;
@@ -348,7 +352,7 @@ a {
 
 .dropdown-hidden {
   position: absolute;
-  top: 3.5rem;
+  top: 2.5rem;
   left: 2.3rem;
 }
 .dropdown-hidden ul,
@@ -379,8 +383,8 @@ a {
 
 .dropdown-hidden2 {
   position: absolute;
-  top: 3.5rem;
-  left: 14.5rem;
+  top: 2.5rem;
+  left: 12.5rem;
 }
 .dropdown-hidden2 li {
   margin-top: 0.5rem;
@@ -468,8 +472,7 @@ a {
 /*=============== main  ============*/
 
 .txt-title {
-  margin-left: 7rem;
-  margin-top: 5rem;
+  margin-left: 4rem;
   width: 63%;
 }
 .txt-main {
@@ -486,6 +489,10 @@ a {
   width: 100%;
   padding-right: 4rem;
   padding-left: 4rem;
+}
+
+.hero-img2 {
+  width: 100%;
 }
 
 .main-section {
@@ -584,9 +591,9 @@ query=====================  */
     display: none;
   }
   .txt-title {
-    margin-left: 4rem;
     margin-top: 1rem;
-    width: 74%;
+    width: 100%;
+    text-align: center;
   }
 
   .txt-main {
@@ -606,11 +613,12 @@ query=====================  */
     width: 96%;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
 
   .btn {
@@ -665,6 +673,13 @@ query=====================  */
     width: 96%;
   }
 
+  .hero-img {
+    display: none;
+  }
+
+  .hero-img2 {
+    display: inline-flex;
+  }
   /* ================Nav bar============= */
   nav {
     justify-content: space-between;
@@ -725,16 +740,15 @@ query=====================  */
     display: flex;
     flex-direction: column-reverse;
     margin-top: 0.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
   }
+
   .txt-title {
     margin-left: 0;
   }
 
   .txt-main {
-    margin-left: 0;
     width: 100%;
+    margin: 0 0 2rem 0;
   }
 
   .btn-learn {
@@ -744,8 +758,7 @@ query=====================  */
 
   .logos-img-box {
     text-align: center;
-    margin: 0 auto;
-    margin: 0 auto;
+    margin: 33px auto 0;
     width: 100%;
   }
 
