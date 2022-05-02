@@ -39,12 +39,17 @@ const click = function () {
   event.preventDefault();
   dropdownFeature.classList.toggle('hidden-nav');
   dropdownFeature2.classList.add('hidden-nav');
+  company.classList.add('moveDown2');
 };
 
 const click2 = function () {
   event.preventDefault();
   dropdownFeature2.classList.toggle('hidden-nav');
   dropdownFeature.classList.add('hidden-nav');
+
+  // if (dropdownFeature2.classList('hidden-nav') !== false) {
+  //   return company.classList.add('moveDown2');
+  // }
 };
 
 feature.addEventListener('click', click);

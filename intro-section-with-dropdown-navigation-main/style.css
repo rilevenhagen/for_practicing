@@ -259,7 +259,8 @@ h2 {
   margin-top: 0;
   font-family: 'Epilogue', sans-serif;
   font-weight: 700;
-  width: 69%;
+  width: 89%;
+  margin-left: 54px;
   text-align: initial;
 }
 
@@ -587,9 +588,20 @@ query=====================  */
     max-width: 937px;
     width: 96%;
   }
-  .login-box {
-    display: none;
+  h2 {
+    margin-left: 0px;
   }
+
+  .aNav {
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+
+  .btnLogin {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+
   .txt-title {
     margin-top: 1rem;
     width: 100%;
@@ -614,6 +626,7 @@ query=====================  */
   }
   h2 {
     font-size: 1.9rem;
+    text-align: center;
   }
 
   p {
@@ -635,10 +648,23 @@ query=====================  */
     line-height: 51px;
   }
 
+  .login-box {
+    display: none;
+  }
+
   /* ========hamburger======= */
   .hamburger-box {
     display: contents;
   }
+
+  .moveDown2 {
+    margin-top: 187px;
+    background-color: #ff0;
+  }
+
+  /* .moveDown {
+    margin-top: 145px;
+  } */
 
   .ul-box {
     text-align: center;
@@ -667,7 +693,7 @@ query=====================  */
   }
 }
 
-@media (max-width: 573px) {
+@media (max-width: 650px) {
   .wrapper {
     max-width: 375px;
     width: 96%;
@@ -717,12 +743,13 @@ query=====================  */
   }
 
   .dropdown-hidden2 {
-    left: 7.5rem;
+    left: 8.9rem;
     top: 5.9rem;
   }
 
   .dropdown-hidden {
-    left: 4.3rem;
+    left: 9.3rem;
+    top: 4rem;
   }
 
   /* ================main============= */
