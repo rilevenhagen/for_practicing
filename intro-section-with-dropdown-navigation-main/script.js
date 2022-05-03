@@ -55,13 +55,13 @@ const click2 = function () {
   carrer.classList.add('moveDown');
 };
 
-const testArrow = function () {
-  if (dropdownFeature.classList.contains('hidden-nav') === true) {
-    return clickOut;
-  } else console.lof('no');
-};
+// const testArrow = function () {
+//   if (dropdownFeature.classList.contains('hidden-nav') === true) {
+//     return clickOut;
+//   } else console.lof('no');
+// };
 
-arrow.addEventListener('click', testArrow);
+// arrow.addEventListener('click', testArrow);
 feature.addEventListener('click', click);
 company.addEventListener('click', click2);
 window.addEventListener('mouseup', clickOut);
