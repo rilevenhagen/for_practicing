@@ -659,12 +659,11 @@ query=====================  */
 
   .moveDown2 {
     margin-top: 187px;
-    background-color: #ff0;
   }
 
-  /* .moveDown {
+  .moveDown {
     margin-top: 145px;
-  } */
+  }
 
   .ul-box {
     text-align: center;
@@ -743,13 +742,15 @@ query=====================  */
   }
 
   .dropdown-hidden2 {
-    left: 8.9rem;
+    left: 7.3rem;
     top: 5.9rem;
+    padding: 0;
   }
 
   .dropdown-hidden {
-    left: 9.3rem;
+    left: 7.3rem;
     top: 4rem;
+    padding: 0;
   }
 
   /* ================main============= */

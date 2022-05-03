@@ -1,8 +1,12 @@
 console.log('🤜🏻🤪🤛🏻');
 
-const feature = document.querySelector('.feature', 'arrow');
+const feature = document.querySelector('.feature');
 
-const company = document.querySelector('.company', 'arrow');
+const arrow = document.querySelector('.arrow');
+
+const company = document.querySelector('.company');
+
+const carrer = document.querySelector('.carrer');
 
 const dropdownFeature = document.querySelector('.dropdown-hidden');
 
@@ -22,6 +26,8 @@ const change = function () {
 const menuArray = [dropdownFeature, dropdownFeature2];
 
 const clickOut = function (event) {
+  company.classList.remove('moveDown2');
+  carrer.classList.remove('moveDown');
   for (let i = 0; i < menuArray.length; i++) {
     let on = menuArray[i];
     if (event.target != on && event.target.parentNode != on) {
@@ -46,12 +52,16 @@ const click2 = function () {
   event.preventDefault();
   dropdownFeature2.classList.toggle('hidden-nav');
   dropdownFeature.classList.add('hidden-nav');
-
-  // if (dropdownFeature2.classList('hidden-nav') !== false) {
-  //   return company.classList.add('moveDown2');
-  // }
+  carrer.classList.add('moveDown');
 };
 
+const testArrow = function () {
+  if (dropdownFeature.classList.contains('hidden-nav') === true) {
+    return clickOut;
+  } else console.lof('no');
+};
+
+arrow.addEventListener('click', testArrow);
 feature.addEventListener('click', click);
 company.addEventListener('click', click2);
 window.addEventListener('mouseup', clickOut);
